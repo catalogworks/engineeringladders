@@ -7,9 +7,9 @@ Although the framework uses roles and levels that are somewhat standard in the U
 The framework relies heavily in radar charts to show visually the different perspectives and expectations of a given position:
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jorgef/engineeringladders/master/charts/template-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jorgef/engineeringladders/master/charts/template.png">
-  <img alt="Template Chart" src="https://raw.githubusercontent.com/jorgef/engineeringladders/master/charts/template.png">
+  <source media="(prefers-color-scheme: dark)" srcset="charts/template-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="charts/template.png">
+  <img alt="Template Chart" src="charts/template.png">
 </picture>
 
 # Career Ladders

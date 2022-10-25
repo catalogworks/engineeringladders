@@ -82,12 +82,3 @@ Assessing managers requires a slightly different perspective, their actions have
 Managers should balance each area —delivery, goals, planning, oversight and relationships— in a way that is sustainable over time. Not all areas might require to be balanced the same way; the seniority of the team, company culture, and business context might move the arrow closer to one side or the other, the green area is a range and not a single value. Having said that, it is important to avoid getting too close to any of the extremes.
 
 In summary, understanding how each manager is performing on every area is a good way to assess their performance and therefore a great opportunity to have meaningful career conversations with them.
-
-# Other Pages
-
-- [**Introduction**](README.md)
-- [**Developer**](Developer.md)
-- [**Tech Lead**](TechLead.md)
-- [**Technical Program Manager**](TechnicalProgramManager.md)
-- [**Engineering Manager**](EngineeringManager.md)
-- [**Tech Lead vs Engineering Manager**](TechLead-EngineeringManager.md)
