@@ -1,0 +1,624 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Catalog Engineering | Career Ladder</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Career Ladders</li><li class="chapter-item expanded "><a href="Developer.html"><strong aria-hidden="true">1.</strong> Developer</a></li><li class="chapter-item expanded "><a href="TechLead.html"><strong aria-hidden="true">2.</strong> Tech Lead</a></li><li class="chapter-item expanded "><a href="TechnicalProgramManager.html"><strong aria-hidden="true">3.</strong> Technical Program Manager</a></li><li class="chapter-item expanded "><a href="EngineeringManager.html"><strong aria-hidden="true">4.</strong> Technical Project Manager</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="misc/contributors.html">Contributors</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Catalog Engineering | Career Ladder</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p>This framework allows software engineering managers to have meaningful conversations with their direct reports around the expectations of each position and how to plan for the next level in their career ladder.</p>
+<p>Although the framework uses roles and levels that are somewhat standard in the US tech industry, every company is different. Please use the information provided as a baseline and feel free adjust it to your needs.</p>
+<p>The framework relies heavily in radar charts to show visually the different perspectives and expectations of a given position:</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/jorgef/engineeringladders/master/charts/template-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/jorgef/engineeringladders/master/charts/template.png">
+  <img alt="Template Chart" src="https://raw.githubusercontent.com/jorgef/engineeringladders/master/charts/template.png">
+</picture>
+<h1 id="career-ladders"><a class="header" href="#career-ladders">Career Ladders</a></h1>
+<p>The framework has 4 different ladders:</p>
+<ul>
+<li><a href="Developer.html"><strong>Developer</strong></a>: role also known as programmer or software engineer, requires a deep level of technical expertise</li>
+<li><a href="TechLead.html"><strong>Tech Lead</strong></a>: role also known as dev lead, is the owner of the system and requires a unique balance between hands-on development, architecture knowledge and production support</li>
+<li><a href="TechnicalProgramManager.html"><strong>Technical Program Manager</strong></a>: role responsible for coordinating and driving to completion initiatives that span multiple teams</li>
+<li><a href="EngineeringManager.html"><strong>Engineering Manager</strong></a>: role also known as dev manager, is responsible for the consistent delivery, career growth and level of happiness of the team</li>
+</ul>
+<p>If you are confused about the difference between a <a href="TechLead.html">Tech Lead</a> and an <a href="EngineeringManager.html">Engineering Manager</a>, please refer to the <a href="TechLead-EngineeringManager.html">Tech Lead vs Engineering Manager</a> page for a detailed comparison.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Level</th><th style="text-align: center">Senior</th><th style="text-align: center"><a href="Developer.html">Developer</a></th><th style="text-align: center"><a href="TechLead.html">Tech Lead</a></th><th style="text-align: center"><a href="TechnicalProgramManager.html">Technical Program Manager</a></th><th style="text-align: center"><a href="EngineeringManager.html">Engineering Manager</a></th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">No</td><td style="text-align: center"><a href="Developer.html#d1---developer-1">D1</a></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">No</td><td style="text-align: center"><a href="Developer.html#d2---developer-2">D2</a></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">3</td><td style="text-align: center">No</td><td style="text-align: center"><a href="Developer.html#d3---developer-3">D3</a></td><td style="text-align: center"></td><td style="text-align: center"></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="Developer.html#d4---developer-4">D4</a></td><td style="text-align: center"><a href="TechLead.html#tl4---tech-lead-4">TL4</a></td><td style="text-align: center"><a href="TechnicalProgramManager.html#tpm4---technical-program-manager-4">TPM4</a></td><td style="text-align: center"></td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="Developer.html#d5---developer-5">D5</a></td><td style="text-align: center"><a href="TechLead.html#tl5---tech-lead-5">TL5</a></td><td style="text-align: center"><a href="TechnicalProgramManager.html#tpm5---technical-program-manager-5">TPM5</a></td><td style="text-align: center"><a href="EngineeringManager.html#em5---engineering-manager-5">EM5</a></td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="Developer.html#d6---developer-6">D6</a></td><td style="text-align: center"><a href="TechLead.html#tl6---tech-lead-6">TL6</a></td><td style="text-align: center"><a href="TechnicalProgramManager.html#tpm6---technical-program-manager-6">TPM6</a></td><td style="text-align: center"><a href="EngineeringManager.html#em6---engineering-manager-6">EM6</a></td></tr>
+<tr><td style="text-align: center">7</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="Developer.html#d7---developer-7">D7</a></td><td style="text-align: center"><a href="TechLead.html#tl7---tech-lead-7">TL7</a></td><td style="text-align: center"><a href="TechnicalProgramManager.html#tpm7---technical-program-manager-7">TPM7</a></td><td style="text-align: center"><a href="EngineeringManager.html#em7---engineering-manager-7">EM7</a></td></tr>
+</tbody></table>
+</div>
+<p>(click on position name for more details)</p>
+<h1 id="axes"><a class="header" href="#axes">Axes</a></h1>
+<p>The chart shown above has the following 5 axes:</p>
+<ul>
+<li><strong>Technology</strong>: knowledge of the tech stack and tools</li>
+<li><strong>System</strong>: level of ownership of the system(s)</li>
+<li><strong>People</strong>: relationship with the team(s)</li>
+<li><strong>Process</strong>: level of engagement with the development process</li>
+<li><strong>Influence</strong>: scope of influence of the position</li>
+</ul>
+<p>The <strong>influence</strong> axis can be seen as a <em>different dimension</em> since it is orthogonal and applies to all the other axes.</p>
+<p>Each axis has 5 different levels of performance. It is important to highlight that every level includes the previous one(s). For example, someone that <em>evangelizes</em> technology, <em>specializes</em> and <em>adopts</em> it as well.</p>
+<p>Keep reading to better understand each level.</p>
+<h1 id="levels"><a class="header" href="#levels">Levels</a></h1>
+<h2 id="technology"><a class="header" href="#technology">Technology</a></h2>
+<ol>
+<li><strong>Adopts</strong>: actively learns and adopts the technology and tools defined by the team</li>
+<li><strong>Specializes</strong>: is the go-to person for one or more technologies and takes initiative to learn new ones</li>
+<li><strong>Evangelizes</strong>: researches, creates proofs of concept and introduces new technologies to the team</li>
+<li><strong>Masters</strong>: has very deep knowledge about the whole technology stack of the system</li>
+<li><strong>Creates</strong>: designs and creates new technologies that are widely used either by internal or external teams</li>
+</ol>
+<h2 id="system"><a class="header" href="#system">System</a></h2>
+<ol>
+<li><strong>Enhances</strong>: successfully pushes new features and bug fixes to improve and extend the system</li>
+<li><strong>Designs</strong>: designs and implements medium to large size features while reducing the system's tech debt</li>
+<li><strong>Owns</strong>: owns the production operation and monitoring of the system and is aware of its SLAs</li>
+<li><strong>Evolves</strong>: evolves the architecture to support future requirements and defines its SLAs</li>
+<li><strong>Leads</strong>: leads the technical excellence of the system and creates plans to mitigate outages</li>
+</ol>
+<h2 id="people"><a class="header" href="#people">People</a></h2>
+<ol>
+<li><strong>Learns</strong>: quickly learns from others and consistently steps up when it is required</li>
+<li><strong>Supports</strong>: proactively supports other team members and helps them to be successful</li>
+<li><strong>Mentors</strong>: mentors others to accelerate their career-growth and encourages them to participate</li>
+<li><strong>Coordinates</strong>: coordinates team members providing effective feedback and moderating discussions</li>
+<li><strong>Manages</strong>: manages the team members' career, expectations, performance and level of happiness</li>
+</ol>
+<h2 id="process"><a class="header" href="#process">Process</a></h2>
+<ol>
+<li><strong>Follows</strong>: follows the team processes, delivering a consistent flow of features to production</li>
+<li><strong>Enforces</strong>: enforces the team processes, making sure everybody understands the benefits and tradeoffs</li>
+<li><strong>Challenges</strong>: challenges the team processes, looking for ways to improve them</li>
+<li><strong>Adjusts</strong>: adjusts the team processes, listening to feedback and guiding the team through the changes</li>
+<li><strong>Defines</strong>: defines the right processes for the team's maturity level, balancing agility and discipline</li>
+</ol>
+<h2 id="influence"><a class="header" href="#influence">Influence</a></h2>
+<ol>
+<li><strong>Subsystem</strong>: makes an impact on one or more subsystems</li>
+<li><strong>Team</strong>: makes an impact on the whole team, not just on specific parts of it</li>
+<li><strong>Multiple Teams</strong>: makes an impact not only his/her team but also on other teams</li>
+<li><strong>Company</strong>: makes an impact on the whole tech organization</li>
+<li><strong>Community</strong>: makes an impact on the tech community</li>
+</ol>
+<h1 id="faqs"><a class="header" href="#faqs">FAQs</a></h1>
+<p><strong>What if some of the people don't meet all the points?</strong></p>
+<p>That is very normal, people are usually stronger in some areas and weaker in others. The framework should not be used as a checklist to promote people but instead as guidance to have meaningful career conversations.</p>
+<p><strong>What if my organization's career ladder is different?</strong></p>
+<p>Since the framework is open source, you have the opportunity to adapt it to your organization. Feel free to use the <a href="charts/template.png">chart template</a> to define your own levels.</p>
+<p><strong>When is a person ready to move to the next level?</strong></p>
+<p>Companies usually expect a person to be performing at the next level <em>consistently for several months</em> before formalizing a promotion.</p>
+<p><strong>How do I collect evidence to support the discussion with my direct reports?</strong></p>
+<p>Different teams collect evidence in different ways. A recommended approach is to use a combination of:</p>
+<ul>
+<li>1:1 conversations</li>
+<li>Feedback from peers and other teams</li>
+<li>Self-evaluation</li>
+</ul>
+<p><strong>Could the framework provide more specific examples of behavior to support each level?</strong></p>
+<p>Specific examples of behavior require knowledge about the way that the team works, the system architecture and its technology stack. It is recommended to allow each team to define their own examples.</p>
+<p><strong>Why does the framework stop at level 7?</strong></p>
+<p>Levels 8 and above vary drastically from company to company. Organizations of different sizes tend to assign a diverse level of scope to positions so high in their structure.</p>
+<p><strong>Do you have any additional resources about the topic?</strong></p>
+<ul>
+<li>
+<p><a href="http://shop.oreilly.com/product/0636920056843.do">The Manager's Path</a>: Camille Fournier does an excellent job at describing the expectations and challenges of many engineering positions. Also, she provides good advice about writing a career ladder in chapter 9.</p>
+</li>
+<li>
+<p><a href="https://store.hbr.org/product/how-to-be-good-at-performance-appraisals-simple-effective-done-right/10295">How to Be Good at Performance Appraisals</a>: Dick Grote explains in simple terms how to define job responsibilities and how to evaluate performance (results and behaviors).</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="developer"><a class="header" href="#developer">Developer</a></h1>
+<p>Role also known as programmer or software engineer, requires a deep level of technical expertise.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Level</th><th style="text-align: center">Senior</th><th style="text-align: center">Position</th></tr></thead><tbody>
+<tr><td style="text-align: center">1</td><td style="text-align: center">No</td><td style="text-align: center"><a href="Developer.html#d1---developer-1">D1 - Developer 1</a></td></tr>
+<tr><td style="text-align: center">2</td><td style="text-align: center">No</td><td style="text-align: center"><a href="Developer.html#d2---developer-2">D2 - Developer 2</a></td></tr>
+<tr><td style="text-align: center">3</td><td style="text-align: center">No</td><td style="text-align: center"><a href="Developer.html#d3---developer-3">D3 - Developer 3</a></td></tr>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="Developer.html#d4---developer-4">D4 - Developer 4</a></td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="Developer.html#d5---developer-5">D5 - Developer 5</a></td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="Developer.html#d6---developer-6">D6 - Developer 6</a></td></tr>
+<tr><td style="text-align: center">7</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="Developer.html#d7---developer-7">D7 - Developer 7</a></td></tr>
+</tbody></table>
+</div>
+<h2 id="d1---developer-1"><a class="header" href="#d1---developer-1">D1 - Developer 1</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/developer-1-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/developer-1.png">
+  <img alt="Developer 1" src="/charts/developer-1.png">
+</picture>
+<ul>
+<li><strong>Adopts</strong>: actively learns and adopts the technology and tools defined by the team</li>
+<li><strong>Enhances</strong>: successfully pushes new features and bug fixes to improve and extend the system</li>
+<li><strong>Learns</strong>: quickly learns from others and consistently steps up when it is required</li>
+<li><strong>Follows</strong>: follows the team processes, delivering a consistent flow of features to production</li>
+<li><strong>Subsystem</strong>: makes an impact on one or more subsystems or team pods</li>
+</ul>
+<h2 id="d2---developer-2"><a class="header" href="#d2---developer-2">D2 - Developer 2</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/developer-2-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/developer-2.png">
+  <img alt="Developer 2" src="/charts/developer-2.png">
+</picture>
+<ul>
+<li><strong>Adopts</strong>: actively learns and adopts the technology and tools defined by the team</li>
+<li><strong>Designs</strong>: designs and implements medium to large size features while reducing the system's tech debt</li>
+<li><strong>Supports</strong>: proactively supports other team members and helps them to be successful</li>
+<li><strong>Enforces</strong>: enforces the team processes, making sure everybody understands the benefits and tradeoffs</li>
+<li><strong>Subsystem</strong>: makes an impact on one or more subsystems or team pods</li>
+</ul>
+<h2 id="d3---developer-3"><a class="header" href="#d3---developer-3">D3 - Developer 3</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/developer-3-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/developer-3.png">
+  <img alt="Developer 3" src="/charts/developer-3.png">
+</picture>
+<ul>
+<li><strong>Specializes</strong>: is the go-to person for one or more technologies and takes initiative to learn new ones</li>
+<li><strong>Designs</strong>: designs and implements medium to large size features while reducing the system's tech debt</li>
+<li><strong>Supports</strong>: proactively supports other team members and helps them to be successful</li>
+<li><strong>Challenges</strong>: challenges the team processes, looking for ways to improve them</li>
+<li><strong>Team</strong>: makes an impact on the whole team, not just on specific parts of it</li>
+</ul>
+<h2 id="d4---developer-4"><a class="header" href="#d4---developer-4">D4 - Developer 4</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/developer-4-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/developer-4.png">
+  <img alt="Developer 4" src="/charts/developer-4.png">
+</picture>
+<ul>
+<li><strong>Evangelizes</strong>: researches, creates proofs of concept and introduces new technologies to the team</li>
+<li><strong>Owns</strong>: owns the production operation and monitoring of the system and is aware of its SLAs</li>
+<li><strong>Mentors</strong>: mentors others to accelerate their career-growth and encourages them to participate</li>
+<li><strong>Challenges</strong>: challenges the team processes, looking for ways to improve them</li>
+<li><strong>Team</strong>: makes an impact on the whole team, not just on specific parts of it</li>
+</ul>
+<h2 id="d5---developer-5"><a class="header" href="#d5---developer-5">D5 - Developer 5</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/developer-5-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/developer-5.png">
+  <img alt="Developer 5" src="/charts/developer-5.png">
+</picture>
+<ul>
+<li><strong>Masters</strong>: has very deep knowledge about the whole technology stack of the system</li>
+<li><strong>Evolves</strong>: evolves the architecture to support future requirements and defines its SLAs</li>
+<li><strong>Mentors</strong>: mentors others to accelerate their career-growth and encourages them to participate</li>
+<li><strong>Adjusts</strong>: adjusts the team processes, listening to feedback and guiding the team through the changes</li>
+<li><strong>Multiple Teams</strong>: makes an impact not only on the whole team but also on other teams</li>
+</ul>
+<h2 id="d6---developer-6"><a class="header" href="#d6---developer-6">D6 - Developer 6</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/developer-6-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/developer-6.png">
+  <img alt="Developer 6" src="/charts/developer-6.png">
+</picture>
+<ul>
+<li><strong>Creates</strong>: designs and creates new technologies that are widely used either by internal or external teams</li>
+<li><strong>Leads</strong>: leads the technical excellence of the system and creates plans to mitigate outages</li>
+<li><strong>Mentors</strong>: mentors others to accelerate their career-growth and encourages them to participate</li>
+<li><strong>Adjusts</strong>: adjusts the team processes, listening to feedback and guiding the team through the changes</li>
+<li><strong>Company</strong>: makes an impact on the whole tech organization</li>
+</ul>
+<h2 id="d7---developer-7"><a class="header" href="#d7---developer-7">D7 - Developer 7</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/developer-7-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/developer-7.png">
+  <img alt="Developer 7" src="/charts/developer-7.png">
+</picture>
+<ul>
+<li><strong>Creates</strong>: designs and creates new technologies that are widely used either by internal or external teams</li>
+<li><strong>Leads</strong>: leads the technical excellence of the system and creates plans to mitigate outages</li>
+<li><strong>Mentors</strong>: mentors others to accelerate their career-growth and encourages them to participate</li>
+<li><strong>Adjusts</strong>: adjusts the team processes, listening to feedback and guiding the team through the changes</li>
+<li><strong>Community</strong>: makes an impact on the tech community</li>
+</ul>
+<h1 id="other-pages"><a class="header" href="#other-pages">Other Pages</a></h1>
+<ul>
+<li><a href="README.html"><strong>Introduction</strong></a></li>
+<li><a href="TechLead.html"><strong>Tech Lead</strong></a></li>
+<li><a href="TechnicalProgramManager.html"><strong>Technical Program Manager</strong></a></li>
+<li><a href="EngineeringManager.html"><strong>Engineering Manager</strong></a></li>
+<li><a href="TechLead-EngineeringManager.html"><strong>Tech Lead vs Engineering Manager</strong></a></li>
+<li><a href="Managing-Managers.html"><strong>Managing Managers</strong></a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tech-lead"><a class="header" href="#tech-lead">Tech Lead</a></h1>
+<p>Role also known as dev lead, is the owner of the system and requires a unique balance between hands-on development, architecture knowledge and production support.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Level</th><th style="text-align: center">Senior</th><th style="text-align: center">Position</th></tr></thead><tbody>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="TechLead.html#tl4---tech-lead-4">TL4 - Tech Lead 4</a></td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="TechLead.html#tl5---tech-lead-5">TL5 - Tech Lead 5</a></td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="TechLead.html#tl6---tech-lead-6">TL6 - Tech Lead 6</a></td></tr>
+<tr><td style="text-align: center">7</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="TechLead.html#tl7---tech-lead-7">TL7 - Tech Lead 7</a></td></tr>
+</tbody></table>
+</div>
+<h2 id="tl4---tech-lead-4"><a class="header" href="#tl4---tech-lead-4">TL4 - Tech Lead 4</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/techlead-4-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/techlead-4.png">
+  <img alt="Tech Lead 4" src="/charts/techlead-4.png">
+</picture>
+<ul>
+<li><strong>Specializes</strong>: is the go-to person for one or more technologies and takes initiative to learn new ones</li>
+<li><strong>Owns</strong>: owns the production operation and monitoring of the system and is aware of its SLAs</li>
+<li><strong>Coordinates</strong>: coordinates team members providing effective feedback and moderating discussions</li>
+<li><strong>Adjusts</strong>: adjusts the team processes, listening to feedback and guiding the team through the changes</li>
+<li><strong>Subsystem</strong>: makes an impact on one or more subsystems or team pods</li>
+</ul>
+<h2 id="tl5---tech-lead-5"><a class="header" href="#tl5---tech-lead-5">TL5 - Tech Lead 5</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/techlead-5-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/techlead-5.png">
+  <img alt="Tech Lead 5" src="/charts/techlead-5.png">
+</picture>
+<ul>
+<li><strong>Evangelizes</strong>: researches, creates proofs of concept and introduces new technologies to the team</li>
+<li><strong>Evolves</strong>: evolves the architecture to support future requirements and defines its SLAs</li>
+<li><strong>Coordinates</strong>: coordinates team members providing effective feedback and moderating discussions</li>
+<li><strong>Defines</strong>: defines the right processes for the team's maturity level, balancing agility and discipline</li>
+<li><strong>Team</strong>: makes an impact on the whole team, not just on specific parts of it</li>
+</ul>
+<h2 id="tl6---tech-lead-6"><a class="header" href="#tl6---tech-lead-6">TL6 - Tech Lead 6</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/techlead-6-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/techlead-6.png">
+  <img alt="Tech Lead 6" src="/charts/techlead-6.png">
+</picture>
+<ul>
+<li><strong>Masters</strong>: has very deep knowledge about the whole technology stack of the system</li>
+<li><strong>Leads</strong>: leads the technical excellence of the system and creates plans to mitigate outages</li>
+<li><strong>Coordinates</strong>: coordinates team members providing effective feedback and moderating discussions</li>
+<li><strong>Defines</strong>: defines the right processes for the team's maturity level, balancing agility and discipline</li>
+<li><strong>Multiple Teams</strong>: makes an impact not only on the whole team but also on other teams</li>
+</ul>
+<h2 id="tl7---tech-lead-7"><a class="header" href="#tl7---tech-lead-7">TL7 - Tech Lead 7</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/techlead-7-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/techlead-7.png">
+  <img alt="Tech Lead 7" src="/charts/techlead-7.png">
+</picture>
+<ul>
+<li><strong>Masters</strong>: has very deep knowledge about the whole technology stack of the system</li>
+<li><strong>Leads</strong>: leads the technical excellence of the system and creates plans to mitigate outages</li>
+<li><strong>Coordinates</strong>: coordinates team members providing effective feedback and moderating discussions</li>
+<li><strong>Defines</strong>: defines the right processes for the team's maturity level, balancing agility and discipline</li>
+<li><strong>Company</strong>: makes an impact on the whole tech organization</li>
+</ul>
+<h1 id="other-pages-1"><a class="header" href="#other-pages-1">Other Pages</a></h1>
+<ul>
+<li><a href="README.html"><strong>Introduction</strong></a></li>
+<li><a href="Developer.html"><strong>Developer</strong></a></li>
+<li><a href="TechnicalProgramManager.html"><strong>Technical Program Manager</strong></a></li>
+<li><a href="EngineeringManager.html"><strong>Engineering Manager</strong></a></li>
+<li><a href="TechLead-EngineeringManager.html"><strong>Tech Lead vs Engineering Manager</strong></a></li>
+<li><a href="Managing-Managers.html"><strong>Managing Managers</strong></a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="technical-program-manager"><a class="header" href="#technical-program-manager">Technical Program Manager</a></h1>
+<p>Role responsible for coordinating and driving to completion initiatives that span multiple teams.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Level</th><th style="text-align: center">Senior</th><th style="text-align: center">Position</th></tr></thead><tbody>
+<tr><td style="text-align: center">4</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="TechnicalProgramManager.html#tpm4---technical-program-manager-4">TPM4 - Technical Program Manager 4</a></td></tr>
+<tr><td style="text-align: center">5</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="TechnicalProgramManager.html#tpm5---technical-program-manager-5">TPM5 - Technical Program Manager 5</a></td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="TechnicalProgramManager.html#tpm6---technical-program-manager-6">TPM6 - Technical Program Manager 6</a></td></tr>
+<tr><td style="text-align: center">7</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="TechnicalProgramManager.html#tpm7---technical-program-manager-7">TPM7 - Technical Program Manager 7</a></td></tr>
+</tbody></table>
+</div>
+<h2 id="tpm4---technical-program-manager-4"><a class="header" href="#tpm4---technical-program-manager-4">TPM4 - Technical Program Manager 4</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/technicalprogrammanager-4-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/technicalprogrammanager-4.png">
+  <img alt="Technical Program Manager 4" src="/charts/technicalprogrammanager-4.png">
+</picture>
+<ul>
+<li><strong>Specializes</strong>: is the go-to person for one or more technologies and takes initiative to learn new ones</li>
+<li><strong>Designs</strong>: designs and implements medium to large size features while reducing the system's tech debt</li>
+<li><strong>Coordinates</strong>: coordinates team members providing effective feedback and moderating discussions</li>
+<li><strong>Adjusts</strong>: adjusts the team processes, listening to feedback and guiding the team through the changes</li>
+<li><strong>Multiple Teams</strong>: makes an impact not only on the whole team but also on other teams</li>
+</ul>
+<h2 id="tpm5---technical-program-manager-5"><a class="header" href="#tpm5---technical-program-manager-5">TPM5 - Technical Program Manager 5</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/technicalprogrammanager-5-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/technicalprogrammanager-5.png">
+  <img alt="Technical Program Manager 5" src="/charts/technicalprogrammanager-5.png">
+</picture>
+<ul>
+<li><strong>Specializes</strong>: is the go-to person for one or more technologies and takes initiative to learn new ones</li>
+<li><strong>Designs</strong>: designs and implements medium to large size features while reducing the system's tech debt</li>
+<li><strong>Coordinates</strong>: coordinates team members providing effective feedback and moderating discussions</li>
+<li><strong>Defines</strong>: defines the right processes for the team's maturity level, balancing agility and discipline</li>
+<li><strong>Multiple Teams</strong>: makes an impact not only on the whole team but also on other teams</li>
+</ul>
+<h2 id="tpm6---technical-program-manager-6"><a class="header" href="#tpm6---technical-program-manager-6">TPM6 - Technical Program Manager 6</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/technicalprogrammanager-6-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/technicalprogrammanager-6.png">
+  <img alt="Technical Program Manager 6" src="/charts/technicalprogrammanager-6.png">
+</picture>
+<ul>
+<li><strong>Specializes</strong>: is the go-to person for one or more technologies and takes initiative to learn new ones</li>
+<li><strong>Owns</strong>: owns the production operation and monitoring of the system and is aware of its SLAs</li>
+<li><strong>Manages</strong>: manages the team members' career, expectations, performance and level of happiness</li>
+<li><strong>Defines</strong>: defines the right processes for the team's maturity level, balancing agility and discipline</li>
+<li><strong>Company</strong>: makes an impact on the whole tech organization</li>
+</ul>
+<h2 id="tpm7---technical-program-manager-7"><a class="header" href="#tpm7---technical-program-manager-7">TPM7 - Technical Program Manager 7</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/technicalprogrammanager-7-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/technicalprogrammanager-7.png">
+  <img alt="Technical Program Manager 7" src="/charts/technicalprogrammanager-7.png">
+</picture>
+<ul>
+<li><strong>Specializes</strong>: is the go-to person for one or more technologies and takes initiative to learn new ones</li>
+<li><strong>Evolves</strong>: evolves the architecture to support future requirements and defines its SLAs</li>
+<li><strong>Manages</strong>: manages the team members' career, expectations, performance and level of happiness</li>
+<li><strong>Defines</strong>: defines the right processes for the team's maturity level, balancing agility and discipline</li>
+<li><strong>Community</strong>: makes an impact on the tech community</li>
+</ul>
+<h1 id="other-pages-2"><a class="header" href="#other-pages-2">Other Pages</a></h1>
+<ul>
+<li><a href="README.html"><strong>Introduction</strong></a></li>
+<li><a href="Developer.html"><strong>Developer</strong></a></li>
+<li><a href="TechLead.html"><strong>Tech Lead</strong></a></li>
+<li><a href="EngineeringManager.html"><strong>Engineering Manager</strong></a></li>
+<li><a href="TechLead-EngineeringManager.html"><strong>Tech Lead vs Engineering Manager</strong></a></li>
+<li><a href="Managing-Managers.html"><strong>Managing Managers</strong></a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="engineering-manager"><a class="header" href="#engineering-manager">Engineering Manager</a></h1>
+<p>Role also known as dev manager, is responsible for the consistent delivery, career growth and level of happiness of the team.</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">Level</th><th style="text-align: center">Senior</th><th style="text-align: center">Position</th></tr></thead><tbody>
+<tr><td style="text-align: center">5</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="EngineeringManager.html#em5---engineering-manager-5">EM5 - Engineering Manager 5</a></td></tr>
+<tr><td style="text-align: center">6</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="EngineeringManager.html#em6---engineering-manager-6">EM6 - Engineering Manager 6</a></td></tr>
+<tr><td style="text-align: center">7</td><td style="text-align: center">Yes</td><td style="text-align: center"><a href="EngineeringManager.html#em7---engineering-manager-7">EM7 - Engineering Manager 7</a></td></tr>
+</tbody></table>
+</div>
+<p>If you have other managers as direct reports, you might want to read the <a href="Managing-Managers.html">Managing Managers</a> section since it provides more information about the &quot;Manages People&quot; aspect of the role.</p>
+<h2 id="em5---engineering-manager-5"><a class="header" href="#em5---engineering-manager-5">EM5 - Engineering Manager 5</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/engineeringmanager-5-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/engineeringmanager-5.png">
+  <img alt="Engineering Manager 5" src="/charts/engineeringmanager-5.png">
+</picture>
+<ul>
+<li><strong>Evangelizes</strong>: researches, creates proofs of concept and introduces new technologies to the team</li>
+<li><strong>Owns</strong>: owns the production operation and monitoring of the system and is aware of its SLAs</li>
+<li><strong>Manages</strong>: manages the team members' career, expectations, performance and level of happiness</li>
+<li><strong>Adjusts</strong>: adjusts the team processes, listening to feedback and guiding the team through the changes</li>
+<li><strong>Team</strong>: makes an impact on the whole team, not just on specific parts of it</li>
+</ul>
+<h2 id="em6---engineering-manager-6"><a class="header" href="#em6---engineering-manager-6">EM6 - Engineering Manager 6</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/engineeringmanager-6-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/engineeringmanager-6.png">
+  <img alt="Engineering Manager 6" src="/charts/engineeringmanager-6.png">
+</picture>
+<ul>
+<li><strong>Evangelizes</strong>: researches, creates proofs of concept and introduces new technologies to the team</li>
+<li><strong>Evolves</strong>: evolves the architecture to support future requirements and defines its SLAs</li>
+<li><strong>Manages</strong>: manages the team members' career, expectations, performance and level of happiness</li>
+<li><strong>Defines</strong>: defines the right processes for the team's maturity level, balancing agility and discipline</li>
+<li><strong>Team</strong>: makes an impact on the whole team, not just on specific parts of it</li>
+</ul>
+<h2 id="em7---engineering-manager-7"><a class="header" href="#em7---engineering-manager-7">EM7 - Engineering Manager 7</a></h2>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="/charts/engineeringmanager-7-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="/charts/engineeringmanager-7.png">
+  <img alt="Engineering Manager 7" src="/charts/engineeringmanager-7.png">
+</picture>
+<ul>
+<li><strong>Evangelizes</strong>: researches, creates proofs of concept and introduces new technologies to the team</li>
+<li><strong>Evolves</strong>: evolves the architecture to support future requirements and defines its SLAs</li>
+<li><strong>Manages</strong>: manages the team members' career, expectations, performance and level of happiness</li>
+<li><strong>Defines</strong>: defines the right processes for the team's maturity level, balancing agility and discipline</li>
+<li><strong>Multiple Teams</strong>: makes an impact not only on the whole team but also on other teams</li>
+</ul>
+<h1 id="other-pages-3"><a class="header" href="#other-pages-3">Other Pages</a></h1>
+<ul>
+<li><a href="README.html"><strong>Introduction</strong></a></li>
+<li><a href="Developer.html"><strong>Developer</strong></a></li>
+<li><a href="TechLead.html"><strong>Tech Lead</strong></a></li>
+<li><a href="TechnicalProgramManager.html"><strong>Technical Program Manager</strong></a></li>
+<li><a href="TechLead-EngineeringManager.html"><strong>Tech Lead vs Engineering Manager</strong></a></li>
+<li><a href="Managing-Managers.html"><strong>Managing Managers</strong></a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="contributors"><a class="header" href="#contributors">Contributors</a></h1>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </body>
+</html>
